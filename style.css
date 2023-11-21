@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+
+}
+
+header {
+    width: 88%;
+}
+
+section {
+    width: 88%;
+    
+}
+main{
+    width: 100%;
+}
+
+.container {
+    width: 88%;
+    display: flex;
+    background-color: antiquewhite;
+    align-items: start;
+    border-bottom: 3px solid black;
+    justify-content: space-around;
+
+
+}
+
+h1 {
+   
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+div>.uc {
+    
+    font-size: 4.5vw;
+    text-align: center;
+    background-color: blueviolet;
+    margin: 0px;
+}
+
+.container>div img {
+    width: 20vw;
+    margin-right: 6px;
+}
+
+
+
+.integrantes {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    height: auto;
+    border-bottom: 5px solid black;
+    background-color: rgb(6, 138, 28);
+    padding-bottom: 5px;
+
+}
+
+.professores {
+    width: 100%;
+    display: flex;
+}
+
+
+.alunos {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    text-align: center;
+
+}
+
+.integrantes #nome {
+    margin-top: auto;
+    color: white;
+    background: linear-gradient(to top, black, transparent);
+
+}
+
+.santos {
+
+    width: 9vw;
+    height: 90%;
+    background-image: url(imagens/stslaranja.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 6px;
+    margin-left: 6px;
+    border-radius: 20px;
+
+
+
+}
+
+.Alburquerque {
+
+    width: 150px;
+    height: 90%;
+    background-image: url(imagens/alburquerque.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 6px;
+    margin-left: 6px;
+    border-radius: 20px;
+}
+
+.jonhvictor {
+
+    width: 150px;
+    height: 90%;
+    background-image: url(imagens/jonhvictor.jpeg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 6px;
+    margin-left: 6px;
+    border-radius: 20px;
+}
+
+.michell {
+
+    width: 150px;
+    height: 90%;
+    background-image: url(imagens/Mib2.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 6px;
+    margin-left: 6px;
+    border-radius: 20px;
+}
+
+.edyene {
+
+    width: 160px;
+    height: 90%;
+    background-image: url(imagens/edyene2.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 6px;
+    margin-right: 6px;
+    border-radius: 20px;
+    font-size: 14px;
+
+}
+
+.natal {
+
+    width: 160px;
+    height: 90%;
+    background-image: url(imagens/Natal5.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 6px;
+    margin-right: 6px;
+    border-radius: 20px;
+    font-size: 14px;
+
+}
+
+.Wanfranklin {
+
+    width: 160px;
+    height: 90%;
+    background-image: url(imagens/Wanfranklin.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 6px;
+    margin-right: 6px;
+
+    border-radius: 20px;
+    font-size: 13px;
+
+}
+
+.entrada {
+    background-image: url(imagens/codigo2.png);
+    background-position: top center;
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    font-style: italic;
+
+
+}
+
+.a3 {
+    margin-right: 5vw;
+}
+
+.entrada {
+    width: 88%;
+    font-size: 3vw;
+}
+
+.entrada h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    background: linear-gradient(to top, #000, transparent);
+
+}
+
+.entrada h2 {
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    background: linear-gradient(to top, #000, transparent);
+
+}
+
+.entrada p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(to top, #000, transparent);
+
+}
+
+.produtos {
+    font-size: 2vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: #0d0e0c;
+    border-top: 5px solid black;
+    width: 88%;
+
+}
+
+.prudutos-item {
+    width: 100%;
+
+
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+
+
+
+}
+
+.prudutos-item img {
+    width: 25vw;
+    height: 12vh;
+    object-fit: cover;
+    border-radius: 2vw;
+
+}
+
+#contador {
+    padding: 5px;
+    background-color: red;
+    border-radius: 10px;
+    margin-left: 2.5vw;
+    margin-bottom: 5px;
+    width: 88%;
+
+}
+
+#contador div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#qtd {
+    font-size: 8vw;
+    text-align: center;
+}
+
+.butaoContador {}
+
+.btn-adicionar {
+    border-radius: 6px;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.5vw;
+    width: 95%;
+    height: 5vh;
+    background-color: aqua;
+    margin: 3px;
+
+
+}
+
+button {
+
+    border-radius: 6px;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 4vw;
+    width: 4vw;
+    height: 5w;
+    background-color: aqua;
+
+
+}
+
+.a3 h3 {
+    font-size: 9vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.a3 p {
+    font-size: 1.2vw;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+
+
+}
+
+.a3 {
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 501px) {
+    .natal {
+        display: none;
+    }
+   
+    /* .container {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2.5vw;
+
+    }
+    div>.uc {
+    
+        font-size: 1.5vw;
+        text-align: center;
+        background-color: blueviolet;
+        margin: 0px;
+    } */
+    
+
+}
+
+@media screen and (max-width: 500px) {
+
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    .container {
+        width: 88vw;
+        display: grid;
+        justify-items: center;
+
+    }
+
+    .h1_p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .uc {
+        color: white;
+    }
+
+    .alunos {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 16vw 16vw;
+    }
+
+    .tamanho {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    #nome {
+        font-size: 1.3vw;
+
+    }
+
+    .a3 {}
+
+    .a3 h3 {
+        font-size: 12vw;
+    }
+
+    .a3 p {
+        font-size: 1.3vw;
+    }
+
+    .professores {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 16vw 16vw;
+        justify-content: space-between;
+
+    }
+
+    .natal {}
+
+    .edyene {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .produtos {
+        grid-template-columns: auto auto;
+    }
+
+
+
+}
