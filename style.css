@@ -92,12 +92,14 @@ div > .uc {
 
 .professores {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
 .alunos {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .integrantes #nome {
@@ -112,9 +114,6 @@ p {
   width: 120px;
   height: 130px;
   border-radius: 15px;
-}
-
-.santos {
 }
 
 .Alburquerque {
@@ -137,8 +136,6 @@ p {
   width: 200px;
 }
 
-.Wanfranklin {
-}
 .a3 h3 {
   font-size: 8vw;
   margin: 0;
@@ -216,6 +213,7 @@ p {
   margin-left: 2.5vw;
   margin-bottom: 5px;
   width: 88%;
+  bottom: 0;
 }
 
 #contador div {
@@ -255,7 +253,23 @@ button {
   background-color: aqua;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+  .integrantes{
+    background-color: black;
+    justify-content: space-around;
+  }
+  .alunos{
+    padding: 20px;
+  }
+  .professores{
+    padding: 20px;
+  }
+  .integrantes{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .container {
     flex-direction: column;
   }
@@ -264,9 +278,10 @@ button {
   }
 
   .alunos {
-    display: grid;
     justify-items: center;
-    grid-template-columns: auto auto;
+    display: grid;
+    grid-template-columns: 16vw 16vw;
+    font-size: 9px;
   }
 
   .h1_p h1 {
@@ -275,12 +290,6 @@ button {
   .h1_p p {
     font-size: 11px;
     color: white;
-  }
-
-  .alunos {
-    display: grid;
-    grid-template-columns: 16vw 16vw;
-    font-size: 9px;
   }
 
   .tamanho img {
@@ -306,10 +315,6 @@ button {
     margin: 0 auto;
   }
 
-  .a3 h3 {
-    /* font-size: 12vw; */
-  }
-
   .a3 p {
     margin-top: -05px;
     margin-left: 0px;
@@ -320,11 +325,6 @@ button {
     grid-template-columns: 16vw 16vw;
   }
 
-  .fotoNatal {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
   .edyene {
     margin: 0;
   }
@@ -332,7 +332,19 @@ button {
   .produtos {
     grid-template-columns: auto auto;
   }
+  .prudutos-item img {
+    width: 75px;
+    height: 30px;
+    /* object-fit: cover; */
+    border-radius: 2vw;
+  }
+  .btn-adicionar {
+    font-size: 13px;
+  }
+  button {
+    font-size: 20px;
+    /* width: 4vw;
+    height: 5w; */
+    background-color: aqua;
+  }
 }
-
-
-
