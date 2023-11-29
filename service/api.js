@@ -29,7 +29,6 @@ class Api {
                 })
 
             const json = await response.json()
-            console.log({ json })
 
             return json
         } catch (error) {
@@ -39,7 +38,7 @@ class Api {
     async removerItemDoCarrinho(nome_item) {
         console.log('API >> adicionarItemAoCarrinho')
         try {
-            const response = await fetch(this.rotas.adicionarItemAoCarrinho.rota + `/${nome_item}`,
+            await fetch(this.rotas.adicionarItemAoCarrinho.rota + `/${nome_item}`,
                 {
                     method: this.rotas.removerItemDoCarrinho.metodo,
                     headers: {
@@ -47,10 +46,7 @@ class Api {
                     },
                 })
 
-            const json = await response.json()
-            console.log({ json })
-
-            return json
+            return true
         } catch (error) {
             console.error(error)
         }
