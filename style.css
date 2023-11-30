@@ -38,13 +38,45 @@ aside {
 }
 main {
   width: 100%;
-  border: 2px solid white;
   margin-top: 5px;
 }
 footer {
   width: 100%;
-  border: 2px solid white;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 10px;
   margin-top: 5px;
+  color: white;
+
+  background-color: #068a1c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > div#finalizar-compra {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  background-color: #068a1c;
+}
+
+footer > div#finalizar-compra > p {
+
+  cursor: pointer;
+}
+
+footer > div#finalizar-compra.disabled {
+  background-color: gray;
+}
+
+footer > div#finalizar-compra > p > a {
+ color: white
 }
 
 .container {
@@ -85,7 +117,7 @@ div > .uc {
   text-align: center;
   color: white;
   font-weight: bolder;
-  background-color: rgb(6, 138, 28);
+  background-color: #068a1c;
   padding: 8px;
   font-size: 11px;
 }
@@ -222,12 +254,9 @@ p {
   justify-content: space-around;
 }
 
-#qtd {
+.qtd {
   font-size: 8vw;
   text-align: center;
-}
-
-.butaoContador {
 }
 
 .btn-adicionar {
@@ -251,6 +280,36 @@ button {
   width: 4vw;
   height: 5w;
   background-color: aqua;
+}
+
+#botao-finalizar-compra {
+  text-decoration: none;
+}
+
+.disabled {
+  color: red
+}
+
+#modal-finalizar-compra > h1 {
+  margin-bottom: 15px;
+}
+
+#modal-finalizar-compra > div > h3#valor-total-compra {
+  margin-bottom: 15px;
+  color: #068a1c;
+}
+
+#modal-finalizar-compra > div > h3#valor-total-compra > span {
+  color: black;
+}
+
+#modal-finalizar-compra > div > div#itens-escolhidos-box > h3 {
+  color: #068a1c;
+  margin-bottom: 10px;
+}
+
+#modal-finalizar-compra > div > div#itens-escolhidos-box > ul > li {
+  margin-bottom: 5px;
 }
 
 @media screen and (min-width: 701px) and (max-width: 1000px) {

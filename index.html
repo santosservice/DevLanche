@@ -7,9 +7,18 @@
   <title>DevLanches</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="imagens/stsicone.png" />
+
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <!-- !-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
   <script src="./service/api.js"></script>
+
+
 </head>
 
 <body>
@@ -112,14 +121,14 @@
       </div>
       <div id="contador">
         <div>
-          <button id="menos" class="butaoContador">-</button>
-          <span id="qtd">0</span>
-          <button id="mais" class="butaoContador">+</button>
+          <button class="menos" class="butaoContador">-</button>
+          <span class="qtd">0</span>
+          <button class="mais" class="butaoContador">+</button>
         </div>
 
         <button class="btn-adicionar">
           <div>
-            <span id="add"> Adicionar </span>
+            <span id="add"> Valor final: </span>
             <span class="valor-final-item"> R$&nbsp;0,00 </span>
           </div>
         </button>
@@ -137,14 +146,14 @@
       </div>
       <div id="contador">
         <div>
-          <button id="menos" class="butaoContador">-</button>
-          <span id="qtd">0</span>
-          <button id="mais" class="butaoContador">+</button>
+          <button class="menos" class="butaoContador">-</button>
+          <span class="qtd">0</span>
+          <button class="mais" class="butaoContador">+</button>
         </div>
 
         <button class="btn-adicionar">
           <div>
-            <span id="add"> Adicionar </span>
+            <span id="add"> Valor final: </span>
             <span class="valor-final-item"> R$&nbsp;0,00 </span>
           </div>
         </button>
@@ -159,14 +168,14 @@
       </div>
       <div id="contador">
         <div>
-          <button id="menos" class="butaoContador">-</button>
-          <span id="qtd">0</span>
-          <button id="mais" class="butaoContador">+</button>
+          <button class="menos" class="butaoContador">-</button>
+          <span class="qtd">0</span>
+          <button class="mais" class="butaoContador">+</button>
         </div>
 
         <button class="btn-adicionar">
           <div>
-            <span id="add"> Adicionar </span>
+            <span id="add"> Valor final: </span>
             <span class="valor-final-item"> R$&nbsp;0,00 </span>
           </div>
         </button>
@@ -181,14 +190,14 @@
       </div>
       <div id="contador">
         <div>
-          <button id="menos" class="butaoContador">-</button>
-          <span id="qtd">0</span>
-          <button id="mais" class="butaoContador">+</button>
+          <button class="menos" class="butaoContador">-</button>
+          <span class="qtd">0</span>
+          <button class="mais" class="butaoContador">+</button>
         </div>
 
         <button class="btn-adicionar">
           <div>
-            <span id="add"> Adicionar </span>
+            <span id="add"> Valor final: </span>
             <span class="valor-final-item"> R$&nbsp;0,00 </span>
           </div>
         </button>
@@ -203,14 +212,14 @@
       </div>
       <div id="contador">
         <div>
-          <button id="menos" class="butaoContador">-</button>
-          <span id="qtd">0</span>
-          <button id="mais" class="butaoContador">+</button>
+          <button class="menos" class="butaoContador">-</button>
+          <span class="qtd">0</span>
+          <button class="mais" class="butaoContador">+</button>
         </div>
 
         <button class="btn-adicionar">
           <div>
-            <span id="add"> Adicionar </span>
+            <span id="add"> Valor final: </span>
             <span class="valor-final-item"> R$&nbsp;0,00 </span>
           </div>
         </button>
@@ -225,14 +234,14 @@
       </div>
       <div id="contador">
         <div>
-          <button id="menos" class="butaoContador">-</button>
-          <span id="qtd">0</span>
-          <button id="mais" class="butaoContador">+</button>
+          <button class="menos" class="butaoContador">-</button>
+          <span class="qtd">0</span>
+          <button class="mais" class="butaoContador">+</button>
         </div>
 
         <button class="btn-adicionar">
           <div>
-            <span id="add"> Adicionar </span>
+            <span id="add"> Valor final: </span>
             <span class="valor-final-item"> R$&nbsp;0,00 </span>
           </div>
         </button>
@@ -241,19 +250,40 @@
 
   </main>
   <footer>
-    <div>Rodapé</div>
+    <div id="finalizar-compra">
+      <div id="modal-finalizar-compra" style="display: hidden;" class="modal">
+        <h1 >Obrigado por pedir da Dev Lanches!</h1>
+
+        <div>
+          <h3 id="valor-total-compra">Valor total: <span></span></h3>
+          <div id="itens-escolhidos-box">
+            <h3>Itens escolhidos:</h3>
+            <!-- Lista adicionada utilizando jQuery -->
+            <ul>
+            </ul>
+          </div>
+        </div>
+        <a href="#" rel="modal:close">Close</a>
+      </div>
+
+      <!--Link para abrir o modal -->
+      <p><a href="#modal-finalizar-compra" id="botao-finalizar-compra">Finalizar compra</a></p>
+    </div>
   </footer>
+
 </body>
+
+<!-- Adiciona e remove itens do carrinho -->
 <script>
   const formatarMoeda = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
     Number(value))
 
   $(document).ready(() => {
-    $('.prudutos-item').on("click", "button#mais", async function (event) {
+    $('.prudutos-item').on("click", "button.mais", async function (event) {
       const _api = new Api()
 
       const elementoClicado = $(this).parent().parent().parent().closest('div'),
-        elementoQuantidade = elementoClicado.find('#qtd'),
+        elementoQuantidade = elementoClicado.find('.qtd'),
         elementoValorDoLanche = elementoClicado.find('h2.valor-lanche')
       elementoValorFinalItem = elementoClicado.find('span.valor-final-item'),
         elementoNome = elementoClicado.find('h2.produtos-item-header-nome')
@@ -265,19 +295,19 @@
         valor: Number(elementoValorDoLanche.text().replace(/\D/g, '') / 100)
       }
 
-      console.log(item)
 
       const itemAdicionado = await _api.adicionarItemAoCarrinho(item)
 
-      console.log(itemAdicionado)
+      console.log({itemAdicionado})
+
       elementoQuantidade.text(novaQuantidade)
       elementoValorFinalItem.text(formatarMoeda(novoValor))
     });
 
-    $('.prudutos-item').on("click", "button#menos", async function (event) {
+    $('.prudutos-item').on("click", "button.menos", async function (event) {
 
       const elementoClicado = $(this).parent().parent().parent().closest('div'),
-        elementoQuantidade = elementoClicado.find('#qtd')
+        elementoQuantidade = elementoClicado.find('.qtd')
 
       if (Number(elementoQuantidade.text()) > 0) {
         const elementoValor = elementoClicado.find('h2.valor-lanche')
@@ -289,13 +319,79 @@
         const nome_item = elementoNome.text()
 
         const itemRemovido = await _api.removerItemDoCarrinho(nome_item)
-        console.log(itemRemovido)
 
         elementoQuantidade.text(novaQuantidade)
         elementoValorFinalItem.text(formatarMoeda(novoValor))
       }
 
     });
+  })
+</script>
+
+<!-- Finalizar compra -->
+<script>
+  $(document).ready(() => {
+    $('div#finalizar-compra').addClass('disabled')
+    $('li.item-escolhido').remove()
+
+    function verificarSeAlgumItemFoiSelecionado() {
+      var existeItemSelecionado = $('span.qtd').filter((quantidadeDeItem, element) => !!Number($(element).text())).length;
+      return !!existeItemSelecionado;
+    }
+
+    function zerarQuantidadesSelecionadas() {
+      $('span.qtd').each(function () { $(this).text('0')})
+      $('span.valor-final-item').each(function () { $(this).text(formatarMoeda(0))})
+      $('li.item-escolhido').remove()
+      $('div#finalizar-compra').addClass('disabled')
+        $('1#botao-finalizar-compra').prop('disabled', true)
+    }
+
+    $('button.mais, button.menos').click(() => {
+      setTimeout(() => {
+        console.log('button.mais, button.menos')
+      if (verificarSeAlgumItemFoiSelecionado()) {
+        $('div#finalizar-compra').removeClass('disabled')
+        $('1#botao-finalizar-compra').prop('disabled', false)
+      }
+      else {
+        $('div#finalizar-compra').addClass('disabled')
+        $('1#botao-finalizar-compra').prop('disabled', true)
+      }
+      }, 300)
+ 
+    })
+
+    $('div#modal-finalizar-compra').on($.modal.BEFORE_CLOSE, () => zerarQuantidadesSelecionadas());
+
+    $('#botao-finalizar-compra').click(async () => {
+
+      
+      if (verificarSeAlgumItemFoiSelecionado()) {
+        const _api = new Api()
+        const compraFinalizada = await _api.finalizarCompra()
+
+        $('#valor-total-compra > span').text(formatarMoeda(compraFinalizada.valorTotal))
+
+        compraFinalizada.itensDoCarrinho.forEach((itemDoCarrinho) => {
+          console.log({itemDoCarrinho})
+        
+
+
+        const divItemEscolhido = `<li class="item-escolhido">${itemDoCarrinho.nome} - ${formatarMoeda(itemDoCarrinho.valor)}</li>`
+
+        $("div#itens-escolhidos-box > ul").append(divItemEscolhido);
+      })
+
+        $('div#modal-finalizar-compra').modal({
+          onclose: zerarQuantidadesSelecionadas,
+          fadeDuration: 100
+        })
+      }
+
+
+    })
+
 
   })
 </script>
