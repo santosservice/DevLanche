@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="../service/api.js"></script>
+
+  <title>Dev Lanches - Relatório</title>
+</head>
+
+<body class="bg-gray-50">
+  <div class="container mx-auto w-full">
+    <nav class="mx-auto py-5 bg-[#068a1c] text-center rounded-t text-white font-bold">
+      <a href="../index.html">Voltar para o restaurante</a>
+    </nav>
+    <hr />
+    <main>
+      <div class="caixa-conteudo my-5 text-center" id="valorTotalVendido">
+        <h2 class="font-medium">Valor total vendido: <span class="font-bold text-green-600">R$ xx.123</span></h2>
+      </div>
+      <div class="caixa-conteudo my-10 text-center w-full font-medium" id="grafico">
+        <h1>Venda de produtos na ultima semana</h1>
+        <canvas id="grafico-conteudo"></canvas>
+      </div>
+      <div class="caixa-conteudo flex flex-col text-center border-solid border-2 border-[#068a1c]" id="analise-itens">
+        <h1 class="font-bold mb-2">Valor arrecadado na venda individual:</h1>
+        <div class="text-lg analise-itens-item flex flex-col" id="analise-itens-item-box">
+          <h1 class="font-medium text-lg"></h1>
+          <div>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+
+    const formatarMoeda = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
+      Number(value))
+
+    $(document).ready(async () => {
+
+
+      const _api = new Api()
+
+      const relatorio = await _api.relatorio()
+
+      // Adiciona valor total ao relatório
+      $('#valorTotalVendido > h2 > span').text(formatarMoeda(relatorio.valorTotal))
+
+      // mostra a frequencia de venda dos pedidos
+
+      Object.entries(relatorio.frequenciaDeCompra).forEach(([nomeItemComprado, valorTotalVendido]) => {
+        const cloneDivAnaliseItensComprados = $('#analise-itens-item-box').clone()
+
+        cloneDivAnaliseItensComprados.find('h1').text(nomeItemComprado)
+        cloneDivAnaliseItensComprados.find('div > span').text(`${formatarMoeda(valorTotalVendido)}`)
+
+        $("#analise-itens").append(cloneDivAnaliseItensComprados);
+      })
+
+      const ctx = document.getElementById('grafico-conteudo');
+
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: Object.keys(relatorio.grafico),
+          datasets: [{
+            label: '# of Votes',
+            data: Object.values(relatorio.grafico),
+            borderWidth: 1
+          }]
+        },
+        options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Bar Chart'
+      }
+    }
+  },
+      });
+
+    })
+  </script>
+</body>
+
+</html>
