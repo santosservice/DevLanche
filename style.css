@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+html {
+  background-color: black;
+  display: flex;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  height: 100vh;
+  border: 2px solid blueviolet;
+  margin: 0 auto;
+}
+/* cabeçalho trabalho em grupo */
+header {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  display: flex;
+  background-color: antiquewhite;
+  align-items: center;
+  border: 3px solid white;
+  justify-content: space-around;
+}
+.uc {
+  font-size: 1.5vw;
+  text-align: center;
+  background-color: blueviolet;
+  font-weight: bold;
+}
+.imgLogo {
+  width: 12vw;
+  margin-right: 6px;
+}
+.logoUnp {
+  width: 18vw;
+}
+.h1_p {
+  text-align: center;
+}
+
+/* local onde está alunos, A3 e Professores */
+section {
+  width: 100%;
+}
+.integrantes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  border: 3px solid white;
+  background-color: rgb(6, 138, 28);
+  margin-top: 2px;
+  padding: 6px 0px;
+}
+.alunos,
+.professores,
+.A3Natal {
+  display: flex;
+  flex-wrap: wrap;
+}
+.professores,
+.A3Natal {
+  justify-content: space-evenly;
+}
+.alunos {
+  width: 49%;
+  justify-content: space-evenly;
+}
+
+.professores {
+  width: 25%;
+}
+.integrantes #nome {
+  font-size: 0.6em;
+  color: white;
+  background: linear-gradient(to top, black, transparent);
+}
+.integrantes h3 {
+  width: 10vw;
+  height: 20vh;
+}
+.integrantes img {
+  width: 10vw;
+  height: 20vh;
+  border-radius: 0 25px;
+  border: 2px solid rgba(52, 255, 76, 0.672);
+  box-shadow: 3px 6px 7px 1px rgba(52, 255, 25, 0.832);
+}
+.fotoNatal img {
+  width: 13vw;
+}
+.A3Natal {
+   width: 26%;
+}
+.a3 #nome {
+  margin-top: 2px;
+}
+.a3 h3 {
+  font-size: 7vw;
+  font-family: "Times New Roman", Times, serif;
+}
+.a3 p {
+  font-size: 0.8vw;
+  letter-spacing: 2px;
+}
+
+.a3 {
+  align-items: center;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+}
+
+/* .santos {
+  width: 9vw;
+  height: 90%;
+  background-image: url(imagens/stslaranja.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 6px;
+  margin-left: 6px;
+  border-radius: 20px;
+} */
+
+.entrada {
+  background-image: url(imagens/codigo2.png);
+  background-position: top center;
+  color: white;
+  text-align: center;
+  letter-spacing: 3px;
+  font-style: italic;
+}
+
+/* .a3 {
+  margin-right: 5vw;
+} */
+
+.entrada {
+  width: 88%;
+  font-size: 3vw;
+}
+
+.entrada h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  background: linear-gradient(to top, #000, transparent);
+}
+
+.entrada h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  background: linear-gradient(to top, #000, transparent);
+}
+
+.entrada p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: linear-gradient(to top, #000, transparent);
+}
+
+.produtos {
+  font-size: 2vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  background-color: #0d0e0c;
+  border-top: 5px solid black;
+  width: 88%;
+}
+
+.prudutos-item {
+  width: 100%;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.prudutos-item img {
+  width: 25vw;
+  height: 12vh;
+  object-fit: cover;
+  border-radius: 2vw;
+}
+
+#contador {
+  padding: 5px;
+  background-color: red;
+  border-radius: 10px;
+  margin-left: 2.5vw;
+  margin-bottom: 5px;
+  width: 88%;
+}
+
+#contador div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#qtd {
+  font-size: 8vw;
+  text-align: center;
+}
+
+.butaoContador {
+}
+
+.btn-adicionar {
+  border-radius: 6px;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.5vw;
+  width: 95%;
+  height: 5vh;
+  background-color: aqua;
+  margin: 3px;
+}
+
+button {
+  border-radius: 6px;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 4vw;
+  width: 4vw;
+  height: 5w;
+  background-color: aqua;
+}
+
+@media screen and (min-width: 501px) {
+  .natal {
+    display: none;
+  }
+
+  /* .container {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2.5vw;
+
+    }
+    div>.uc {
+    
+        font-size: 1.5vw;
+        text-align: center;
+        background-color: blueviolet;
+        margin: 0px;
+    } */
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 7vw;
+  }
+
+  .container {
+    width: 88vw;
+    display: grid;
+    justify-items: center;
+  }
+
+  .h1_p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .uc {
+    color: white;
+  }
+
+  .alunos {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 16vw 16vw;
+  }
+
+  .tamanho {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  #nome {
+    font-size: 1.3vw;
+  }
+
+  .a3 {
+  }
+
+  .a3 h3 {
+    font-size: 12vw;
+  }
+
+  .a3 p {
+    font-size: 1.3vw;
+  }
+
+  .professores {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 16vw 16vw;
+    justify-content: space-between;
+  }
+
+  .natal {
+  }
+
+  .edyene {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .produtos {
+    grid-template-columns: auto auto;
+  }
+}

@@ -1,650 +1,435 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DevLanches</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="imagens/stsicone.png" />
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-  <!-- !-- jQuery Modal -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
-  <script src="./service/api.js"></script>
-
-
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <div>
-        <img class="logoAnima" src="imagens/logoAnima.webp" alt="" />
-      </div>
-
-      <div class="h1_p">
-        <h1>Trabalho em Grupo</h1>
-        <p class="uc">
-          UC: Modelos, Métodos e Técnicas da Engenharia de Software
-        </p>
-      </div>
-
-      <div>
-        <img class="unp" src="imagens/unp1.png" alt="" />
-      </div>
-    </div>
-  </header>
-  <section>
-    <div class="integrantes">
-      <div class="alunos">
-        <div class="santos demaisConfig">
-          <img src="imagens/stslaranja.png" alt="" />
-          <p id="nome">
-            Santinho <br />
-            RA:&nbsp1282227687
-          </p>
-        </div>
-        <div class="Alburquerque demaisConfig">
-          <img src="imagens/alburquerque.png" alt="" />
-          <p id="nome">
-            Alburquerque <br />
-            RA:&nbsp12822216012
-          </p>
-        </div>
-        <div class="jonhvictor demaisConfig">
-          <img src="imagens/jonhvictor.jpeg" alt="" />
-          <p id="nome">
-            João Victor <br />
-            RA:&nbsp12822212148
-          </p>
-        </div>
-        <div class="michell demaisConfig">
-          <img src="imagens/Mib2.jpg" alt="" />
-          <p id="nome">
-            Michell <br />
-            RA:&nbsp12822125581
-          </p>
-        </div>
-      </div>
-
-      <div class="professores">
-        <article class="a3">
-          <div>
-            <h3>A3</h3>
-            <p>Dezembro 2023</p>
-          </div>
-        </article>
-
-        <div class="fotoNatal tamanho" id="Natal-RN">
-          <img src="imagens/natal5.jpg" alt="" />
-          <div>
-            <p id="nome">Visite Natal-RN<br />A Cidade do Sol</p>
-          </div>
-        </div>
-        <div class="edyene tamanho">
-          <img src="imagens/edyene2.jpg" alt="" />
-          <p id="nome">
-            Edyene Cely A. Oliveira <br />
-            Professora: On-line
-          </p>
-        </div>
-
-        <div class="Wanfranklin tamanho">
-          <img src="imagens/Wanfranklin.png" alt="" />
-          <p id="nome">
-            Wanfranklin de Carvalho <br />
-            Professor: Presencial
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="botões">
-    <a class="document" href="pages/pdf_a3_wan&edy.pdf"><button class="btn-document">Docs</button></a>
-    <a class="relatorio" href="pages/relatorio.html"><button class="btn-relatorio">Relatórios</button></a>
-  </div>
-
-  <aside class="entrada">
-    <h1>Developer Lanches</h1>
-    <p>Lugar de Lanchar e Programar</p>
-    <h2>Faça seu pedido</h2>
-  </aside>
-  <main class="produtos">
-    <div class="prudutos-item">
-      <div class="produtos-item-header">
-        <h2 class="produtos-item-header-nome">Tradicional</h2>
-        <img src="imagens/cachorro/cachorroTradicional.png" alt="tradicional" />
-        <p>Carne, Frango, Salcicha, Verduras</p>
-        <h2 class="valor-lanche">R$ 5,20</h2>
-      </div>
-      <div id="contador">
-        <div>
-          <button class="menos" class="butaoContador">-</button>
-          <span class="qtd">0</span>
-          <button class="mais" class="butaoContador">+</button>
-        </div>
-
-        <button class="btn-adicionar">
-          <div>
-            <span id="add"> Valor final: </span>
-            <span class="valor-final-item"> R$&nbsp;0,00 </span>
-          </div>
-        </button>
-      </div>
-
-
-    </div>
-
-    <div class="prudutos-item">
-      <div class="produtos-item-header">
-        <h2 class="produtos-item-header-nome">Camarão</h2>
-        <img src="imagens/cachorro/camarao.png" alt="Camarão" />
-        <p>Camarão, Frango, Salcicha</p>
-        <h2 class="valor-lanche">R$ 8,00</h2>
-      </div>
-      <div id="contador">
-        <div>
-          <button class="menos" class="butaoContador">-</button>
-          <span class="qtd">0</span>
-          <button class="mais" class="butaoContador">+</button>
-        </div>
-
-        <button class="btn-adicionar">
-          <div>
-            <span id="add"> Valor final: </span>
-            <span class="valor-final-item"> R$&nbsp;0,00 </span>
-          </div>
-        </button>
-      </div>
-    </div>
-    <div class="prudutos-item">
-      <div class="produtos-item-header">
-        <h2 class="produtos-item-header-nome">Carne de Sol</h2>
-        <img src="imagens/cachorro/cq_carneSol.jfif" alt="Carne de Sol" />
-        <p>Carne de Sol, Salcicha, Cebola</p>
-        <h2 class="valor-lanche">R$ 8,00</h2>
-      </div>
-      <div id="contador">
-        <div>
-          <button class="menos" class="butaoContador">-</button>
-          <span class="qtd">0</span>
-          <button class="mais" class="butaoContador">+</button>
-        </div>
-
-        <button class="btn-adicionar">
-          <div>
-            <span id="add"> Valor final: </span>
-            <span class="valor-final-item"> R$&nbsp;0,00 </span>
-          </div>
-        </button>
-      </div>
-    </div>
-    <div class="prudutos-item">
-      <div class="produtos-item-header">
-        <h2 class="produtos-item-header-nome">Gigante</h2>
-        <img src="imagens/cachorro/especialdodev.png" alt="" />
-        <p>Carne, Frango, Salcicha, Verduras</p>
-        <h2 class="valor-lanche">R$ 10,00</h2>
-      </div>
-      <div id="contador">
-        <div>
-          <button class="menos" class="butaoContador">-</button>
-          <span class="qtd">0</span>
-          <button class="mais" class="butaoContador">+</button>
-        </div>
-
-        <button class="btn-adicionar">
-          <div>
-            <span id="add"> Valor final: </span>
-            <span class="valor-final-item"> R$&nbsp;0,00 </span>
-          </div>
-        </button>
-      </div>
-    </div>
-    <div class="prudutos-item">
-      <div class="produtos-item-header">
-        <h2 class="produtos-item-header-nome">Hot Dog Simples</h2>
-        <img src="imagens/cachorro/hotDog.png" alt="" />
-        <p>Frango, Salcicha, Batata Palha</p>
-        <h2 class="valor-lanche">R$ 5,00</h2>
-      </div>
-      <div id="contador">
-        <div>
-          <button class="menos" class="butaoContador">-</button>
-          <span class="qtd">0</span>
-          <button class="mais" class="butaoContador">+</button>
-        </div>
-
-        <button class="btn-adicionar">
-          <div>
-            <span id="add"> Valor final: </span>
-            <span class="valor-final-item"> R$&nbsp;0,00 </span>
-          </div>
-        </button>
-      </div>
-    </div>
-    <div class="prudutos-item">
-      <div class="produtos-item-header">
-        <h2 class="produtos-item-header-nome">Especial Dev.Jr</h2>
-        <img src="imagens/cachorro/cq_paoComMolho.jpg" alt="" />
-        <p>Salcicha, com Graxa</p>
-        <h2 class="valor-lanche">R$ 3,00</h2>
-      </div>
-      <div id="contador">
-        <div>
-          <button class="menos" class="butaoContador">-</button>
-          <span class="qtd">0</span>
-          <button class="mais" class="butaoContador">+</button>
-        </div>
-
-        <button class="btn-adicionar">
-          <div>
-            <span id="add"> Valor final: </span>
-            <span class="valor-final-item"> R$&nbsp;0,00 </span>
-          </div>
-        </button>
-      </div>
-    </div>
-
-  </main>
-  <footer>
-    <div id="finalizar-compra">
-      <div id="modal-finalizar-compra" style="display: hidden;" class="modal">
-        <h1 >Obrigado por pedir da Dev Lanches!</h1>
-
-        <div>
-          <h3 id="valor-total-compra">Valor total: <span></span></h3>
-          <div id="itens-escolhidos-box">
-            <h3>Itens escolhidos:</h3>
-            <!-- Lista adicionada utilizando jQuery -->
-            <ul>
-            </ul>
-          </div>
-        </div>
-        <a href="#" rel="modal:close">Close</a>
-      </div>
-
-      <!--Link para abrir o modal -->
-      <p><a href="#modal-finalizar-compra" id="botao-finalizar-compra">Finalizar compra</a></p>
-    </div>
-  </footer>
-
-</body>
-
-<!-- Adiciona e remove itens do carrinho -->
-<script>
-  const formatarMoeda = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
-    Number(value))
-
-  $(document).ready(() => {
-    $('.prudutos-item').on("click", "button.mais", async function (event) {
-      const _api = new Api()
-
-      const elementoClicado = $(this).parent().parent().parent().closest('div'),
-        elementoQuantidade = elementoClicado.find('.qtd'),
-        elementoValorDoLanche = elementoClicado.find('h2.valor-lanche')
-      elementoValorFinalItem = elementoClicado.find('span.valor-final-item'),
-        elementoNome = elementoClicado.find('h2.produtos-item-header-nome')
-      const novaQuantidade = Number(elementoQuantidade.text()) + 1,
-        novoValor = (elementoValorDoLanche.text().replace(/\D/g, '') / 100) * novaQuantidade
-
-      const item = {
-        nome: elementoNome.text(),
-        valor: Number(elementoValorDoLanche.text().replace(/\D/g, '') / 100)
-      }
-
-
-      const itemAdicionado = await _api.adicionarItemAoCarrinho(item)
-
-      console.log({itemAdicionado})
-
-      elementoQuantidade.text(novaQuantidade)
-      elementoValorFinalItem.text(formatarMoeda(novoValor))
-    });
-
-    $('.prudutos-item').on("click", "button.menos", async function (event) {
-
-      const elementoClicado = $(this).parent().parent().parent().closest('div'),
-        elementoQuantidade = elementoClicado.find('.qtd')
-
-      if (Number(elementoQuantidade.text()) > 0) {
-        const elementoValor = elementoClicado.find('h2.valor-lanche')
-        elementoValorFinalItem = elementoClicado.find('span.valor-final-item')
-        const novaQuantidade = Number(elementoQuantidade.text()) - 1,
-          novoValor = (elementoValor.text().replace(/\D/g, '') / 100) * novaQuantidade
-
-        const _api = new Api()
-        const nome_item = elementoNome.text()
-
-        const itemRemovido = await _api.removerItemDoCarrinho(nome_item)
-
-        elementoQuantidade.text(novaQuantidade)
-        elementoValorFinalItem.text(formatarMoeda(novoValor))
-      }
-
-    });
-  })
-</script>
-
-<!-- Finalizar compra -->
-<script>
-  $(document).ready(() => {
-    $('div#finalizar-compra').addClass('disabled')
-    $('li.item-escolhido').remove()
-
-    function verificarSeAlgumItemFoiSelecionado() {
-      var existeItemSelecionado = $('span.qtd').filter((quantidadeDeItem, element) => !!Number($(element).text())).length;
-      return !!existeItemSelecionado;
-    }
-
-    function zerarQuantidadesSelecionadas() {
-      $('span.qtd').each(function () { $(this).text('0')})
-      $('span.valor-final-item').each(function () { $(this).text(formatarMoeda(0))})
-      $('li.item-escolhido').remove()
-      $('div#finalizar-compra').addClass('disabled')
-        $('1#botao-finalizar-compra').prop('disabled', true)
-    }
-
-    $('button.mais, button.menos').click(() => {
-      setTimeout(() => {
-        console.log('button.mais, button.menos')
-      if (verificarSeAlgumItemFoiSelecionado()) {
-        $('div#finalizar-compra').removeClass('disabled')
-        $('1#botao-finalizar-compra').prop('disabled', false)
-      }
-      else {
-        $('div#finalizar-compra').addClass('disabled')
-        $('1#botao-finalizar-compra').prop('disabled', true)
-      }
-      }, 300)
- 
-    })
-
-    $('div#modal-finalizar-compra').on($.modal.BEFORE_CLOSE, () => zerarQuantidadesSelecionadas());
-
-    $('#botao-finalizar-compra').click(async () => {
-
-      
-      if (verificarSeAlgumItemFoiSelecionado()) {
-        const _api = new Api()
-        const compraFinalizada = await _api.finalizarCompra()
-
-        $('#valor-total-compra > span').text(formatarMoeda(compraFinalizada.valorTotal))
-
-        compraFinalizada.itensDoCarrinho.forEach((itemDoCarrinho) => {
-          console.log({itemDoCarrinho})
-        
-
-
-        const divItemEscolhido = `<li class="item-escolhido">${itemDoCarrinho.nome} - ${formatarMoeda(itemDoCarrinho.valor)}</li>`
-
-        $("div#itens-escolhidos-box > ul").append(divItemEscolhido);
-      })
-
-        $('div#modal-finalizar-compra').modal({
-          onclose: zerarQuantidadesSelecionadas,
-          fadeDuration: 100
-        })
-      }
-
-
-    })
-
-
-  })
-</script>
-
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevLanches</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="imagens/stsicone.png">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./comandos.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="imagens/stsicone.png" />
 
-</head>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
 
-<body>
+    <!-- !-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+
+    <script src="./service/api.js"></script>
+  </head>
+
+  <body>
     <header>
-
-        <div class="container">
-            <div>
-                <img src="imagens/logoAnima.webp" alt="">
-            </div>
-
-            <div class="h1_p">
-                <h1>Trabalho em Grupo</h1>
-                <p class="uc">UC: Modelos, Métodos e Técnicas da Engenharia de Software</p>
-            </div>
-
-            <div>
-                <img class="unp" src="imagens/unp1.png" alt="">
-            </div>
+      <div class="container">
+        <div>
+          <img class="logoAnima imgLogo" src="imagens/logoAnima.webp" alt="" />
         </div>
-    
+
+        <div class="h1_p">
+          <h1>Trabalho em Grupo</h1>
+          <p class="uc">
+            UC: Modelos, Métodos e Técnicas da Engenharia de Software
+          </p>
+        </div>
+
+        <div>
+          <img class="logoUnp imgLogo" src="imagens/unp1.png" alt="" />
+        </div>
+      </div>
     </header>
-    <section class="integrantes">
+
+    <!-- Container dos Professore e Alunos -->
+    <section>
+      <div class="integrantes">
         <div class="alunos">
-            <div class="santos tamanho">
+          <div class="santos demaisConfig">
+            <img src="imagens/stslaranja.png" alt="" />
+            <p id="nome">
+              Santinho <br />
+              RA:&nbsp1282227687
+            </p>
+          </div>
+          <div class="Alburquerque demaisConfig">
+            <img src="imagens/alburquerque.png" alt="" />
+            <p id="nome">
+              Alburquerque <br />
+              RA:&nbsp12822216012
+            </p>
+          </div>
+          <div class="jonhvictor demaisConfig">
+            <img src="imagens/jonhvictor.jpeg" alt="" />
+            <p id="nome">
+              João Victor <br />
+              RA:&nbsp12822212148
+            </p>
+          </div>
+          <div class="michell demaisConfig">
+            <img src="imagens/Mib2.jpg" alt="" />
+            <p id="nome">
+              Michell <br />
+              RA:&nbsp12822125581
+            </p>
+          </div>
+        </div>
 
-                <p id="nome">Santinho <br> RA: 1282227687</p>
+        <div class="A3Natal">
+          <div class="a3">
+            <h3>A3</h3>
+            <p id="nome">
+              Dezembro 2023 <br />
+              ♥
+            </p>
+          </div>
 
+          <div class="fotoNatal tamanho" id="Natal-RN">
+            <img src="imagens/natal5.jpg" alt="" />
+            <div>
+              <p id="nome">Visite Natal-RN<br />A Cidade do Sol</p>
             </div>
-            <div class="Alburquerque tamanho">
-                <p id="nome">Alburquerque <br> RA: 12822216012 </p>
-
-            </div>
-            <div class="jonhvictor tamanho">
-                <p id="nome">João Victor <br> RA: 12822212148 </p>
-
-            </div>
-            <div class="michell tamanho">
-
-                <p id="nome">Michell <br> RA: 12822125581</p>
-            </div>
+          </div>
         </div>
 
         <div class="professores">
-            <div class="a3">
-                <h3>A3</h3>
-                <p>Dezembro/2023</p>
-            </div>
-    
-            <div class="natal tamanho">
-                <p id="nome">Visite Natal-RN </p>
-    
-            </div>
-            <div class="edyene tamanho">
-                <p id="nome">Edyene Cely A. Oliveira <br> Professora: On-line </p>
-    
-            </div>
-    
-            <div class="Wanfranklin tamanho">
-                <p id="nome">Wanfranklin de Carvalho <br> Professor: Presencial </p>
-    
-            </div>
-            <div></div>
-        </div>
-        
+          <div class="edyene tamanho">
+            <img src="imagens/edyene2.jpg" alt="" />
+            <p id="nome">
+              Edyene Cely A. Oliveira <br />
+              Professora: On-line
+            </p>
+          </div>
 
+          <div class="Wanfranklin tamanho">
+            <img src="imagens/Wanfranklin.png" alt="" />
+            <p id="nome">
+              Wanfranklin de Carvalho <br />
+              Professor: Presencial
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-    <div class="entrada">
-        <h1>Developer Lanches</h1>
-        <p>Lugar de Lanchar e Programar</p>
-        <h2>Faça seu pedido</h2>
+
+    <div class="botões">
+      <a class="document" href="pages/pdf_a3_wan&edy.pdf"
+        ><button class="btn-document">Docs</button></a
+      >
+      <a class="relatorio" href="pages/relatorio.html"
+        ><button class="btn-relatorio">Relatórios</button></a
+      >
     </div>
+
+    <aside class="entrada">
+      <h1>Developer Lanches</h1>
+      <p>Lugar de Lanchar e Programar</p>
+      <h2>Faça seu pedido</h2>
+    </aside>
     <main class="produtos">
-        <div class="prudutos-item">
-            <h2>Tradicional</h2>
-            <img src="imagens/cachorro/cachorroTradicional.png" alt="tradicional">
-            <p>Carne, Frango, Salcicha, Verduras</p>
-            <h2 class="valor-lanche">R$ 5,20</h2>
-            <div id="contador">
-                <div id="dalsjdk">
-                    <button id="menos" class="butaoContador">-</button>
-                    <span id="qtd">0</span>
-                    <button id="mais" class="butaoContador">+</button>
-
-                </div>
-
-                <button class="btn-adicionar">
-                    <div>
-                        <span id="add">
-                            Adicionar
-                        </span>
-                        <span class="valor-final-item">
-                            R$&nbsp;0,00
-                        </span>
-                    </div>
-                </button>
-            </div>
+      <div class="prudutos-item">
+        <div class="produtos-item-header">
+          <h2 class="produtos-item-header-nome">Tradicional</h2>
+          <img
+            src="imagens/cachorro/cachorroTradicional.png"
+            alt="tradicional"
+          />
+          <p>Carne, Frango, Salcicha, Verduras</p>
+          <h2 class="valor-lanche">R$ 5,20</h2>
         </div>
-        <div class="prudutos-item">
-            <h2>Camarão</h2>
-            <img src="imagens/cachorro/camarao.png" alt="Camarão">
-            <p>Camarão, Frango, Salcicha</p>
-            <h2>R$ 8,00</h2>
-            <div id="contador">
-                <div>
-                    <button id="menos" class="butaoContador">-</button>
-                    <span id="qtd">0</span>
-                    <button id="mais" class="butaoContador">+</button>
+        <div id="contador">
+          <div>
+            <button class="menos" class="butaoContador">-</button>
+            <span class="qtd">0</span>
+            <button class="mais" class="butaoContador">+</button>
+          </div>
 
-                </div>
-
-                <button class="btn-adicionar">
-                    <div>
-                        <span id="add">
-                            Adicionar
-                        </span>
-                        <span>
-                            R$&nbsp;0,00
-                        </span>
-                    </div>
-                </button>
+          <button class="btn-adicionar">
+            <div>
+              <span id="add"> Valor final: </span>
+              <span class="valor-final-item"> R$&nbsp;0,00 </span>
             </div>
+          </button>
         </div>
-        <div class="prudutos-item">
-            <h2>Carne de Sol</h2>
-            <img src="imagens/cachorro/cq_carneSol.jfif" alt="Carne de Sol">
-            <p>Carne de Sol, Salcicha, Cebola</p>
-            <h2>R$ 8,00</h2>
-            <div id="contador">
-                <div>
-                    <button id="menos" class="butaoContador">-</button>
-                    <span id="qtd">0</span>
-                    <button id="mais" class="butaoContador">+</button>
+      </div>
 
-                </div>
+      <div class="prudutos-item">
+        <div class="produtos-item-header">
+          <h2 class="produtos-item-header-nome">Camarão</h2>
+          <img src="imagens/cachorro/camarao.png" alt="Camarão" />
+          <p>Camarão, Frango, Salcicha</p>
+          <h2 class="valor-lanche">R$ 8,00</h2>
+        </div>
+        <div id="contador">
+          <div>
+            <button class="menos" class="butaoContador">-</button>
+            <span class="qtd">0</span>
+            <button class="mais" class="butaoContador">+</button>
+          </div>
 
-                <button class="btn-adicionar">
-                    <div>
-                        <span id="add">
-                            Adicionar
-                        </span>
-                        <span>
-                            R$&nbsp;0,00
-                        </span>
-                    </div>
-                </button>
+          <button class="btn-adicionar">
+            <div>
+              <span id="add"> Valor final: </span>
+              <span class="valor-final-item"> R$&nbsp;0,00 </span>
             </div>
+          </button>
         </div>
-        <div class="prudutos-item">
-            <h2>Gigante</h2>
-            <img src="imagens/cachorro/especialdodev.png" alt="">
-            <p>Carne, Frango, Salcicha, Verduras</p>
-            <h2>R$ 10,00</h2>
-            <div id="contador">
-                <div>
-                    <button id="menos" class="butaoContador">-</button>
-                    <span id="qtd">0</span>
-                    <button id="mais" class="butaoContador">+</button>
+      </div>
+      <div class="prudutos-item">
+        <div class="produtos-item-header">
+          <h2 class="produtos-item-header-nome">Carne de Sol</h2>
+          <img src="imagens/cachorro/cq_carneSol.jfif" alt="Carne de Sol" />
+          <p>Carne de Sol, Salcicha, Cebola</p>
+          <h2 class="valor-lanche">R$ 8,00</h2>
+        </div>
+        <div id="contador">
+          <div>
+            <button class="menos" class="butaoContador">-</button>
+            <span class="qtd">0</span>
+            <button class="mais" class="butaoContador">+</button>
+          </div>
 
-                </div>
-
-                <button class="btn-adicionar">
-                    <div>
-                        <span id="add">
-                            Adicionar
-                        </span>
-                        <span>
-                            R$&nbsp;0,00
-                        </span>
-                    </div>
-                </button>
+          <button class="btn-adicionar">
+            <div>
+              <span id="add"> Valor final: </span>
+              <span class="valor-final-item"> R$&nbsp;0,00 </span>
             </div>
+          </button>
         </div>
-        <div class="prudutos-item">
-            <h2>Hot Dog Simples</h2>
-            <img src="imagens/cachorro/hotDog.png" alt="">
-            <p>Frango, Salcicha, Batata Palha </p>
-            <h2>R$ 5,00</h2>
-            <div id="contador">
-                <div>
-                    <button id="menos" class="butaoContador">-</button>
-                    <span id="qtd">0</span>
-                    <button id="mais" class="butaoContador">+</button>
+      </div>
+      <div class="prudutos-item">
+        <div class="produtos-item-header">
+          <h2 class="produtos-item-header-nome">Gigante</h2>
+          <img src="imagens/cachorro/especialdodev.png" alt="" />
+          <p>Carne, Frango, Salcicha, Verduras</p>
+          <h2 class="valor-lanche">R$ 10,00</h2>
+        </div>
+        <div id="contador">
+          <div>
+            <button class="menos" class="butaoContador">-</button>
+            <span class="qtd">0</span>
+            <button class="mais" class="butaoContador">+</button>
+          </div>
 
-                </div>
-
-                <button class="btn-adicionar">
-                    <div>
-                        <span id="add">
-                            Adicionar
-                        </span>
-                        <span>
-                            R$&nbsp;0,00
-                        </span>
-                    </div>
-                </button>
+          <button class="btn-adicionar">
+            <div>
+              <span id="add"> Valor final: </span>
+              <span class="valor-final-item"> R$&nbsp;0,00 </span>
             </div>
+          </button>
         </div>
-        <div class="prudutos-item">
-            <h2>Especial Dev.Jr</h2>
-            <img src="imagens/cachorro/cq_paoComMolho.jpg" alt="">
-            <p>Salcicha, com Graxa </p>
-            <h2>R$ 3,00</h2>
-            <div id="contador">
-                <div>
-                    <button id="menos" class="butaoContador">-</button>
-                    <span id="qtd">0</span>
-                    <button id="mais" class="butaoContador">+</button>
+      </div>
+      <div class="prudutos-item">
+        <div class="produtos-item-header">
+          <h2 class="produtos-item-header-nome">Hot Dog Simples</h2>
+          <img src="imagens/cachorro/hotDog.png" alt="" />
+          <p>Frango, Salcicha, Batata Palha</p>
+          <h2 class="valor-lanche">R$ 5,00</h2>
+        </div>
+        <div id="contador">
+          <div>
+            <button class="menos" class="butaoContador">-</button>
+            <span class="qtd">0</span>
+            <button class="mais" class="butaoContador">+</button>
+          </div>
 
-                </div>
-
-                <button class="btn-adicionar">
-                    <div>
-                        <span id="add">
-                            Adicionar
-                        </span>
-                        <span>
-                            R$&nbsp;0,00
-                        </span>
-                    </div>
-                </button>
+          <button class="btn-adicionar">
+            <div>
+              <span id="add"> Valor final: </span>
+              <span class="valor-final-item"> R$&nbsp;0,00 </span>
             </div>
-
+          </button>
         </div>
+      </div>
+      <div class="prudutos-item">
+        <div class="produtos-item-header">
+          <h2 class="produtos-item-header-nome">Especial Dev.Jr</h2>
+          <img src="imagens/cachorro/cq_paoComMolho.jpg" alt="" />
+          <p>Salcicha, com Graxa</p>
+          <h2 class="valor-lanche">R$ 3,00</h2>
+        </div>
+        <div id="contador">
+          <div>
+            <button class="menos" class="butaoContador">-</button>
+            <span class="qtd">0</span>
+            <button class="mais" class="butaoContador">+</button>
+          </div>
 
+          <button class="btn-adicionar">
+            <div>
+              <span id="add"> Valor final: </span>
+              <span class="valor-final-item"> R$&nbsp;0,00 </span>
+            </div>
+          </button>
+        </div>
+      </div>
     </main>
+    <footer>
+      <div id="finalizar-compra">
+        <div id="modal-finalizar-compra" style="display: hidden" class="modal">
+          <h1>Obrigado por pedir da Dev Lanches!</h1>
 
+          <div>
+            <h3 id="valor-total-compra">Valor total: <span></span></h3>
+            <div id="itens-escolhidos-box">
+              <h3>Itens escolhidos:</h3>
+              <!-- Lista adicionada utilizando jQuery -->
+              <ul></ul>
+            </div>
+          </div>
+          <a href="#" rel="modal:close">Close</a>
+        </div>
 
+        <!--Link para abrir o modal -->
+        <p>
+          <a href="#modal-finalizar-compra" id="botao-finalizar-compra"
+            >Finalizar compra</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
 
+  <!-- Adiciona e remove itens do carrinho -->
+  <script>
+    const formatarMoeda = (value) =>
+      new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      }).format(Number(value));
 
-</body>
+    $(document).ready(() => {
+      $(".prudutos-item").on("click", "button.mais", async function (event) {
+        const _api = new Api();
 
->>>>>>> 36ea862127fbf8b75d52ac61d42854840463f3bd
+        const elementoClicado = $(this)
+            .parent()
+            .parent()
+            .parent()
+            .closest("div"),
+          elementoQuantidade = elementoClicado.find(".qtd"),
+          elementoValorDoLanche = elementoClicado.find("h2.valor-lanche");
+        (elementoValorFinalItem = elementoClicado.find(
+          "span.valor-final-item"
+        )),
+          (elementoNome = elementoClicado.find("h2.produtos-item-header-nome"));
+        const novaQuantidade = Number(elementoQuantidade.text()) + 1,
+          novoValor =
+            (elementoValorDoLanche.text().replace(/\D/g, "") / 100) *
+            novaQuantidade;
+
+        const item = {
+          nome: elementoNome.text(),
+          valor: Number(elementoValorDoLanche.text().replace(/\D/g, "") / 100),
+        };
+
+        const itemAdicionado = await _api.adicionarItemAoCarrinho(item);
+
+        console.log({ itemAdicionado });
+
+        elementoQuantidade.text(novaQuantidade);
+        elementoValorFinalItem.text(formatarMoeda(novoValor));
+      });
+
+      $(".prudutos-item").on("click", "button.menos", async function (event) {
+        const elementoClicado = $(this)
+            .parent()
+            .parent()
+            .parent()
+            .closest("div"),
+          elementoQuantidade = elementoClicado.find(".qtd");
+
+        if (Number(elementoQuantidade.text()) > 0) {
+          const elementoValor = elementoClicado.find("h2.valor-lanche");
+          elementoValorFinalItem = elementoClicado.find(
+            "span.valor-final-item"
+          );
+          const novaQuantidade = Number(elementoQuantidade.text()) - 1,
+            novoValor =
+              (elementoValor.text().replace(/\D/g, "") / 100) * novaQuantidade;
+
+          const _api = new Api();
+          const nome_item = elementoNome.text();
+
+          const itemRemovido = await _api.removerItemDoCarrinho(nome_item);
+
+          elementoQuantidade.text(novaQuantidade);
+          elementoValorFinalItem.text(formatarMoeda(novoValor));
+        }
+      });
+    });
+  </script>
+
+  <!-- Finalizar compra -->
+  <script>
+    $(document).ready(() => {
+      $("div#finalizar-compra").addClass("disabled");
+      $("li.item-escolhido").remove();
+
+      function verificarSeAlgumItemFoiSelecionado() {
+        var existeItemSelecionado = $("span.qtd").filter(
+          (quantidadeDeItem, element) => !!Number($(element).text())
+        ).length;
+        return !!existeItemSelecionado;
+      }
+
+      function zerarQuantidadesSelecionadas() {
+        $("span.qtd").each(function () {
+          $(this).text("0");
+        });
+        $("span.valor-final-item").each(function () {
+          $(this).text(formatarMoeda(0));
+        });
+        $("li.item-escolhido").remove();
+        $("div#finalizar-compra").addClass("disabled");
+        $("1#botao-finalizar-compra").prop("disabled", true);
+      }
+
+      $("button.mais, button.menos").click(() => {
+        setTimeout(() => {
+          console.log("button.mais, button.menos");
+          if (verificarSeAlgumItemFoiSelecionado()) {
+            $("div#finalizar-compra").removeClass("disabled");
+            $("1#botao-finalizar-compra").prop("disabled", false);
+          } else {
+            $("div#finalizar-compra").addClass("disabled");
+            $("1#botao-finalizar-compra").prop("disabled", true);
+          }
+        }, 300);
+      });
+
+      $("div#modal-finalizar-compra").on($.modal.BEFORE_CLOSE, () =>
+        zerarQuantidadesSelecionadas()
+      );
+
+      $("#botao-finalizar-compra").click(async () => {
+        if (verificarSeAlgumItemFoiSelecionado()) {
+          const _api = new Api();
+          const compraFinalizada = await _api.finalizarCompra();
+
+          $("#valor-total-compra > span").text(
+            formatarMoeda(compraFinalizada.valorTotal)
+          );
+
+          compraFinalizada.itensDoCarrinho.forEach((itemDoCarrinho) => {
+            console.log({ itemDoCarrinho });
+
+            const divItemEscolhido = `<li class="item-escolhido">${
+              itemDoCarrinho.nome
+            } - ${formatarMoeda(itemDoCarrinho.valor)}</li>`;
+
+            $("div#itens-escolhidos-box > ul").append(divItemEscolhido);
+          });
+
+          $("div#modal-finalizar-compra").modal({
+            onclose: zerarQuantidadesSelecionadas,
+            fadeDuration: 100,
+          });
+        }
+      });
+    });
+  </script>
 </html>
